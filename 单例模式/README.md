@@ -9,12 +9,12 @@
 
 在声明对象时直接创建对象。
 ```java
-private static Singleton1 instance = new Singleton1();
+private static Singleton instance = new Singleton1();
 /*
 ...
 ...
 */
-public static Singleton1 getInstance() {
+public static Singleton getInstance() {
     return instance;
 }
 ```
@@ -23,14 +23,14 @@ public static Singleton1 getInstance() {
 
 在外部调用时才判断是是否需要创建对象。
 ```java
-private static Singleton2 instance = null;
+private static Singleton instance = null;
 /*
 ...
 ...
 */
-public static Singleton2 getInstance() {
+public static Singleton getInstance() {
     if (instance == null) {
-      instance = new Singleton2();
+      instance = new Singleton();
     }
     return instance;
 }
